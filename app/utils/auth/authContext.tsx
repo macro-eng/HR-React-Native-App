@@ -24,6 +24,7 @@ export interface AuthProps {
 const authContext = createContext<AuthProps>(defaultProps);
 export const AuthContext :React.FC<{children : ReactNode}> = ({children})=>{
     const [user,setUser] = useState('')
+    const user1 = ''
     
     const authAxios = axios.create()
 
