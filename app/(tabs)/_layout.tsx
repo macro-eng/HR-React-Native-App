@@ -6,15 +6,11 @@ import { HapticTab } from '@/components/HapticTab';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ProfileScreen } from './profile';
 import SettingsScreen from './settings';
-import ExploreScreen from './explore';
-import App from '.';
-import HomeScreen from '../components/HomeScreen';
-import LeaveLandingPage from '../components/HomeLeaveScreen';
 import StackNavigator from '../navigation/StackNavigator';
+import AttendanceHome from '../components/AttendanceIndex';
 
 const Tabs = createBottomTabNavigator();
 export default function BottomTaps() {
@@ -22,13 +18,17 @@ export default function BottomTaps() {
 
   return (
     <Tabs.Navigator
+  
       screenOptions={{
         
         tabBarActiveTintColor: Colors[colorScheme ?? 'dark'].tint,
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
-        
+        tabBarLabelStyle:{
+          color:"black"
+        },
+        tabBarHideOnKeyboard:true,
         tabBarStyle: Platform.select({
           ios: {
             // Use a transparent background on iOS to show the blur effect
@@ -47,12 +47,11 @@ export default function BottomTaps() {
         name="HomeStack"
         component={StackNavigator}
         options={{
-          
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color,focused }) => <Ionicons size={25} name={focused?"home":"home-outline"} color={focused ? "gray" :"black"} />,
+          tabBarLabel:'Home',
+          tabBarIcon: ({ color,focused }) => <Ionicons size={25} name={focused?"home":"home-outline"} color={focused ? "black" :"gray"}  />,
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="Leaves"
         component={LeaveLandingPage}
         options={{
@@ -60,24 +59,24 @@ export default function BottomTaps() {
           tabBarLabel: 'Leave',
           tabBarIcon: ({ color,focused }) => <Ionicons size={25} name={focused?"search":"search-outline"} color={focused ? "gray" :"black"} />,
         }}
-      />
+      /> */}
  
-         <Tabs.Screen 
-      name="settings"
-      component={SettingsScreen}
-      options={{
-        
-        tabBarLabel: 'Settings',
-        tabBarIcon: ({ color,focused }) => <Ionicons size={25} name={focused?"settings":"settings-outline"} color={focused ? "gray" :"black"} />,
-      }}/>
-  
+ <Tabs.Screen 
+    name="AttendanceScreen"
+    component={AttendanceHome}
+    options={{
+      
+      tabBarLabel: 'Attendances',
+      tabBarIcon: ({ color,focused }) => <Ionicons size={25} name={focused?"settings":"compass-outline"} color={focused ? "gray" :"black"} />,
+    }}/>
       <Tabs.Screen 
-      name="profile"
+      name="Slip-Salary"
       component={ProfileScreen}
       options={{
-        tabBarLabel: 'Profile',
-        tabBarIcon: ({ color,focused }) => <Ionicons size={25} name={focused ? "person":"person-outline"} color={focused ? "gray" :"black"} />,
+        tabBarLabel: 'Salary Slip',
+        tabBarIcon: ({ color,focused }) => <Ionicons size={25} name={focused ? "cash":"cash-outline"} color={focused ? "gray" :"black"} />,
       }}/>
+  
     </Tabs.Navigator>
   );
 }

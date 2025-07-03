@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import {StatusBar, StyleSheet,  Platform, SectionList, View,Text,Image, TouchableOpacity, Alert } from 'react-native';
+import {StatusBar,ActivityIndicator,StyleSheet,  Platform, SectionList, View,Text,Image, TouchableOpacity, Alert } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Button from '@react-navigation/elements'
 import { useState } from 'react';
@@ -14,7 +14,7 @@ import { useContext } from 'react';
  const [password,setPassword] = useState("");
  const navigation = useNavigation();
  const handleLogin= async()=>{
-         const {logout,login} = useContext(AuthContext)
+        //  const {logout,login} = useContext(AuthContext)
          
           const response = await loginUser(email,password);
           if(response.status === 'success'){
@@ -25,20 +25,10 @@ import { useContext } from 'react';
             //   localStorage.setItem("EmployeeData",JSON.stringify(response.data));
             // }
           }else if( response.status==='error') {
-            Alert.alert("اسم المستخدم او كلمة السر غير صحيحة");
-
-    
+            Alert.alert("اسم المستخدم او كلمة السر غير صحيحة");    
           }
       
-            //  Alert.alert(response.status)
-          //   const userResponse  = await axios.get("http://localhost:8000/api/resource/Employee/HR-EMP-00001",{
-          //     headers:{
-          //         'Authorization':"token 6f9c7e5758dba82:0f24be4081a1512"
-
-          //     }
-              
-          //  });    
-          //   console.log(userResponse.data.data)
+  
           }
         
  

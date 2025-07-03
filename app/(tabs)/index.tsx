@@ -45,7 +45,6 @@ function FlatgridView(){
   ])
   return (
     <FlatGrid 
-  
    itemDimension={130}
    data={items}
    style={styles.gridView}

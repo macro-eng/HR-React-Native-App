@@ -1,6 +1,7 @@
 import { View,Text, Image } from "react-native";
 import  {get_employee_info} from "../utils/api";
 import { useState } from "react";
+import { Ionicons } from "@expo/vector-icons";
 
 
 
@@ -9,6 +10,8 @@ const AttendanceScreen =()=>{
   const [data1,setdata1] = useState<any>([]);
 //   const [employee,setEmployeeData] = useState([]);
 //   const [logo,setlogo] = useState([]);
+
+
 
 data.then((res:any)=> JSON.parse(res)).then((d)=>{
     setdata1(d)

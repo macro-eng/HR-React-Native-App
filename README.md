@@ -1,7 +1,7 @@
 # HR React Native App linked With Frappe👋
 
 
-**Requirements**
+## Requirements
 before operating the app make sure that you configured this requirements
 
 - [Android Studio ]
@@ -27,12 +27,14 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npm  start --android
     ```
 **There will be list of options** 
+
+In the output, you'll find options to open the app in your android phone 
+
+press a 
+reload r
+
+
 ![App Screenshot](./assets/images/react-logo@3x.png)
-
-In the output, you'll find options to open the app in a
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
 ## Get a fresh project
 
 When you're ready, run:

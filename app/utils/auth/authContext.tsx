@@ -2,7 +2,7 @@ import axios ,{AxiosInstance} from "axios";
 import React, {  useContext, useState,createContext, ReactNode } from "react";
 import { UserModel } from "./Model";
 import { View } from "react-native";
-import ExploreScreen from "@/app/(tabs)/explore";
+import ExploreScreen from "@/app/(tabs)/Login";
 
 const defaultProps ={
     login:()=>null,
