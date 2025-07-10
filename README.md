@@ -33,11 +33,17 @@ In the output, you'll find options to open the app in your android phone
 press a 
 reload r
 
-
+## UI Screens
 ![App Screenshot](app/Home.jpg)
+
+## Login Screen
 ![App Screenshot](app/Login.jpg)
+
+## Leave Request Form
 ![App Screenshot](app/leave.jpg)
-![App Screenshot](app/attendance.jpg)
+
+## Attendances Records Screen
+![App Screenshot](app/attendances.jpg)
 ## Get a fresh project
 
 When you're ready, run:
