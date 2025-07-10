@@ -34,7 +34,10 @@ press a
 reload r
 
 
-![App Screenshot](./assets/images/react-logo@3x.png)
+![App Screenshot](app/Home.jpg)
+![App Screenshot](app/Login.jpg)
+![App Screenshot](app/leave.jpg)
+![App Screenshot](app/attendance.jpg)
 ## Get a fresh project
 
 When you're ready, run:
