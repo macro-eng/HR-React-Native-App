@@ -2,7 +2,8 @@
 
 
 ## Requirements
-before operating the app make sure that you configured this requirements
+before operating the app make sure that you configured this requirements 
+### still in developing stage
 
 - [Android Studio ]
 - [SDK Package]
